@@ -3,7 +3,7 @@
     $host       = 'localhost'; //=>127.0.0.1
     $dbname     = 'Pets';
     $username   = 'postgres';
-    $password   ='unicesmag';
+    $password   = 'unicesmag';
     $port       = '5432';
 
     $conn = pg_connect("
@@ -14,14 +14,10 @@
         port=$port
     ");
 
-    if(!$conn){
-        die("Connection error:".pg_last_error());
-    }else{
-        echo"Success !!!";
-    
+    if(!$conn) {
+        die("Connection error: " . pg_last_error());
+    } else {
+        echo "Success !!!!";
     }
-
-
-
 
 ?>

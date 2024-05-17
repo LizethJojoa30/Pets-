@@ -1,3 +1,13 @@
+<?php
+    session_start();
+    if(isset($_SESSION["id_user"])){
+        //header("Location:home.php");
+        header("refresh:0;url=home.php");
+        exit;
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,16 +17,11 @@
     <link rel="icon" type="image/png" href="../src/icons/logo.png">
 </head>
 <body>
-    <center>
     <form action="backend/signin.php" method="post">
         <input type="email" name="email" required placeholder="@">
-        <td><tr><input type="password" name="passwd" required placeholder="*****"></tr></td>
-        <tr><td align="center"><button>Login</button></td></tr>
-        &nbsp;<a href="singup.html">Create an account</a>
+        <input type="password" name="passwd" required placeholder="*****">
+        <button>Login</button>
+        &nbsp;<a href = "signup.html">Create an account</a>
     </form>
-</center>
-   <form name="sinnup-form" action ="" method="post">
-    <table dorder="0" align="center"></table>
-   </form>
 </body>
 </html>
